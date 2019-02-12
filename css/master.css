@@ -1,0 +1,86 @@
+body {
+  background-color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1vmin;
+  color: #0E0E0C;
+  margin: 0;
+}
+.screen1 {
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #A1BCD0;
+  background-image: url('../img/background.png');
+  background-size: cover;
+}
+.screen23 {
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+.screen4 {
+  max-width: 100vw;
+  height: 62vh;
+  margin: 0;
+  background-color: #A1BCD0;
+}
+h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 6.7em;
+  text-align: right;
+}
+h2 {
+  margin-top: 10.2vh;
+  font-weight: 600;
+  font-size: 4.4em;
+  text-align: center;
+}
+h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3.3em;
+  color: #6D6D6D;
+  text-align: center;
+}
+p {
+  margin: 0;
+  font-weight: 500;
+  font-size: calc(0.6em + 16px);
+}
+.subtitleScr1 {
+  text-align: right;
+  color: #0E0E0C;
+}
+.divImgScr1 {
+  height: 60vh;
+  margin-left: 8.5vw;
+}
+.imgScr1 {
+  max-height: 100%;
+  max-width: 83vw;
+}
+.titlesScr1 {
+  margin-right: 4.5vw;
+  float: right;
+}
+.flexboxScr2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.colScr2 {
+  flex: 1;
+}
+button {
+  text-decoration: none;
+  border: none;
+  border-radius: 1.4vmin;
+  color: #FFFFFF;
+  background-color: #346387;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3.1em;
+  font-weight: 500;
+  padding: 2vmin 5vmin;
+}
