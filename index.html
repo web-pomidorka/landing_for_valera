@@ -5,44 +5,97 @@
     <title>Приручите своего дракона</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript">
+      function ChangeImage(v) {
+        var imgList = [];
+        imgList.push(document.getElementById('left_image'));
+        imgList.push(document.getElementById('main_image'));
+        imgList.push(document.getElementById('right_image'));
+        switch (v) {
+          case 'left':
+            var src = imgList[2].src;
+            for (var i = 2; i > 0; i--) {
+              imgList[i].src = imgList[i-1].src;
+            }
+            imgList[0].src = src;
+            break;
+          case 'right':
+            var src = imgList[0].src;
+            for (var i = 0; i < 2; i++) {
+              imgList[i].src = imgList[i+1].src;
+            }
+            imgList[2].src = src;
+            break;
+        }
+      }
+    </script>
   </head>
   <body>
     <main>
-      <article class="screen1">
-        <div class="divImgScr1">
-          <img src="img/toothless.png" alt="" class="imgScr1">
+      <article class="offer">
+        <div class="divImgOffer">
+          <img src="img/toothless.png" alt="" class="imgOffer">
         </div>
-        <hgroup class="titlesScr1">
+        <hgroup class="titlesOffer">
           <h1>Приручите своего дракона</h1>
-          <h3 class="subtitleScr1">Знакомьтесь, это - Беззубик, самый веселый и умный дракон в мире.<br>Приручите его, и у вас появится замечательный друг.</h3>
+          <h3 class="subtitleOffer">Знакомьтесь, это - Беззубик, самый веселый и умный дракон в мире.<br>Приручите его, и у вас появится замечательный друг.</h3>
         </hgroup>
       </article>
-      <article class="screen23">
+      <article class="description">
         <h2>Необычный питомец и настоящий друг</h2>
-        <section class="flexboxScr2">
-          <div class="colScr2">
-            <img src="" alt="">
+        <section class="flexboxDesription">
+          <div class="colDesription">
+            <img src="img/icon.png" alt="" class="iconDescription">
             <p>Здесь находится текст про то, какой Беззубик классный и плюшевый. Здесь находится текст про то, какой Беззубик классный и плюшевый. Здесь находится текст про то, какой Беззубик классный и плюшевый. Здесь находится текст про</p>
           </div>
-          <div class="colScr2">
-            <img src="" alt="">
+          <div class="colDesription">
+            <img src="img/icon.png" alt="" class="iconDescription">
             <p>Из какого он мультфильма, насколько он мягкий, а еще можно взять младшего Беззубика - он тоже клевый. Из какого он мультфильма, насколько он мягкий, а еще можно взять младшего Беззубика - он тоже клевый.</p>
           </div>
-          <div class="colScr2">
-            <img src="" alt="">
+          <div class="colDesription">
+            <img src="img/icon.png" alt="" class="iconDescription">
             <p>А в конце текста предложено посмотреть на его фото - и убедиться во всём самим. А в конце текста предложено посмотреть на его фото - и убедиться во всём самим. А в конце текста предложено посмотреть на его фото - и убедиться</p>
           </div>
         </section>
         <button type="button" name="buy1">Заказать</button>
       </article>
-      <article class="screen23">
+      <article class="gallery">
         <h2>Самый обаятельный дракон в мире</h2>
+        <section class="flexboxGallery">
+          <article class="colGallery">
+            <img src="img/left_arrow.png" alt="" class="arrowGallery" onclick="ChangeImage('left')">
+            <img src="img/photo1.png" alt="" id="left_image" class="miniPhotoGallery" onclick="ChangeImage('left')">
+          </article>
+          <article class="mainColGallery">
+            <img src="img/photo2.png" alt="" id="main_image" class="mainPhotoGallery">
+          </article>
+          <article class="colGallery">
+            <img src="img/photo3.png" alt="" id="right_image" class="miniPhotoGallery" onclick="ChangeImage('right')">
+            <img src="img/right_arrow.png" alt="" class="arrowGallery" onclick="ChangeImage('right')">
+          </article>
+        </section>
         <button type="button" name="buy2">Заказать</button>
       </article>
-      <article class="screen4">
+      <article class="contacts">
         <h2>Оставьте ваши контакты</h2>
-        <h3>Ваш Беззубик уже ждёт вас</h3>
-        <button type="button" name="submit">Отправить</button>
+        <h3 class="subtitleContacts">Ваш Беззубик уже ждёт вас</h3>
+        <form class="formContacts" action="index.html" method="post">
+          <article class="colContacts">
+            <p>Имя:</p>
+            <input name="login">
+          </article>
+          <article class="colContacts">
+            <p>Электронная почта:</p>
+            <input type="email" name="email"
+              pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
+          </article>
+          <article class="colContacts">
+            <p>Телефон:</p>
+            <input type="tel" name="phone"
+              pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+          </article>
+        </form>
+        <button type="button" name="submit" form="formContacts">Отправить</button>
       </article>
     </main>
   </body>
