@@ -178,7 +178,8 @@ button {
 }
 .formContacts {
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
+  flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
   /*margin-left: 7vmax;
@@ -187,18 +188,24 @@ button {
   margin-bottom: 3.7vmin;*/
   margin: 5% 0;
 }
-@media (orientation: portrait) {
-  .formContacts {flex-direction: column;}
-}
 .colContacts {
-  flex-basis: 200px;
-  flex-grow: 2;
+  /*flex-basis: 200px;*/
+  flex-basis: 125px;
+  width: 65%;
+  margin: 0 auto;
+  /*flex-grow: 2;
   flex-shrink: 2;
   margin-left: 3.2vmax;
-  margin-right: 3.2vmax;
+  margin-right: 3.2vmax;*/
+}
+@media (min-width: 1200px) {
+  /*.formContacts {flex-direction: column;}*/
+  .colContacts {width: 35%;}
 }
 .contacts p {
-  text-align: left;
+  /*text-align: left;*/
+  text-align: center;
+  margin-bottom: 1%;
   font-size: 5em;
 }
 .contacts input {
