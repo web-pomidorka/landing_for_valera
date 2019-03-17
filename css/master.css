@@ -35,7 +35,8 @@ h3 {
 p {
   margin: 0;
   font-weight: 500;
-  font-size: 4em;
+  /*font-size: 4em;*/
+  font-size: calc(2.5em + 14px);
   padding: 0 16%;
 }
 button {
@@ -207,7 +208,9 @@ button {
   /*text-align: left;*/
   text-align: center;
   margin: 1% 0;
-  font-size: 5em;
+  /*font-size: 5em;*/
+  /*font-size: 30px;*/
+  font-size: calc(5em + 14px);
 }
 .contacts input {
   width: 100%;
@@ -219,7 +222,7 @@ button {
   padding-left: 0.5vmin;
   padding-right: 0.5vmin;
   font-family: 'Open Sans', sans-serif;
-  /*font-size: calc(0.6em + 14px);*/
-  font-size: 5em;
+  font-size: calc(5em + 14px);
+  /*font-size: 40px;*/
   color: #0E0E0C;
 }
