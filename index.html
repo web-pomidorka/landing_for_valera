@@ -57,7 +57,7 @@
             <p>А в конце текста предложено посмотреть на его фото - и убедиться во всём самим. А в конце текста предложено посмотреть на его фото - и убедиться во всём самим. А в конце текста предложено посмотреть на его фото - и убедиться</p>
           </div>
         </section>
-        <button type="button" name="buy1">Заказать</button>
+        <a href="#linkContact"><button type="button" name="buy1">Заказать</button></a>
       </article>
       <article class="gallery">
         <h2>Самый обаятельный дракон в мире</h2>
@@ -74,28 +74,30 @@
             <img src="img/right_arrow.png" alt="" class="arrowGallery" onclick="ChangeImage('right')">
           </article>
         </section>
-        <button type="button" name="buy2">Заказать</button>
+        <a href="#linkContact"><button type="button" name="buy2">Заказать</button></a>
       </article>
       <article class="contacts">
-        <h2>Оставьте ваши контакты</h2>
-        <h3 class="subtitleContacts">Ваш Беззубик уже ждёт вас</h3>
-        <form class="formContacts" action="index.html" method="post">
-          <article class="colContacts">
-            <p>Имя:</p>
-            <input name="login">
-          </article>
-          <article class="colContacts">
-            <p>Электронная почта:</p>
-            <input type="email" name="email"
-              pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
-          </article>
-          <article class="colContacts">
-            <p>Телефон:</p>
-            <input type="tel" name="phone"
-              pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
-          </article>
-        </form>
-        <button type="button" name="submit" form="formContacts">Отправить</button>
+        <a name="linkContact">
+            <h2>Оставьте ваши контакты</h2>
+            <h3 class="subtitleContacts">Ваш Беззубик уже ждёт вас</h3>
+            <form class="formContacts" action="index.html" method="post">
+              <article class="colContacts">
+                <p>Имя:</p>
+                <input name="login">
+              </article>
+              <article class="colContacts">
+                <p>Электронная почта:</p>
+                <input type="email" name="email"
+                  pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
+              </article>
+              <article class="colContacts">
+                <p>Телефон:</p>
+                <input type="tel" name="phone"
+                  pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+              </article>
+            </form>
+            <button type="button" name="submit" form="formContacts">Отправить</button>
+        </a>
       </article>
     </main>
   </body>
